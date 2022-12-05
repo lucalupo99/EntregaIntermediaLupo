@@ -1,0 +1,21 @@
+{% extends "Peluqueria/Padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Contanos sobre el producto requerido y nosotros te informaremos sobre el mismo</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<h1>Completa los campos y nos pondremos en contacto</h1>
+
+<form action="{% url 'contacto' %}" method="POST"> {% csrf_token %}
+
+<table>
+    {{ form.as_table }}
+
+</table>
+<input type="submit" value="Contactanos">        
+
+</form>
+{% endblock %}

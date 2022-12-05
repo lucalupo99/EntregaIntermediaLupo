@@ -1,0 +1,20 @@
+{% extends "Peluqueria/Padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Resultados</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<ul>
+    
+    {% for marca in marca %}
+     
+      <li> {{marca.producto}} </li>
+      <li> {{marca.marca}} </li>
+      <br>
+    
+    {% endfor %}
+</ul>
+{% endblock %}
